@@ -7,6 +7,7 @@ import CarDetails from "./pages/CarDetails.tsx";
 import Category from "./pages/Category.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Company from "./pages/Company.tsx";
+import AuctionToday from "./pages/AuctionToday.tsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/car/:id" element={<CarDetails />} />
           <Route path="/category" element={<Category />} />
           <Route path="/company" element={<Company />} />
+          <Route path="/auction" element={<AuctionToday />} />
         </Routes>
       </BrowserRouter>
     </div>
