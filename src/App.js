@@ -5,19 +5,25 @@ import Login from "./pages/Login.tsx";
 import Register from "./pages/Register.tsx";
 import CarDetails from "./pages/CarDetails.tsx";
 import Category from "./pages/Category.tsx";
+import Navbar from "./components/Navbar.tsx";
+import Company from "./pages/Company.tsx";
 
 function App() {
-  return <div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/car/:id" element={<CarDetails />} />
-        <Route path="/category" element={<Category />} />
-      </Routes>
-    </BrowserRouter>
-  </div>;
+  return (
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/car/:id" element={<CarDetails />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/company" element={<Company />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
