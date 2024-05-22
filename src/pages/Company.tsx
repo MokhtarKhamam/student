@@ -1,11 +1,18 @@
 import React from "react";
 
 const image = [
-  "/assets/car.webp",
-  "/assets/motor.jpg",
-  "/assets/شؤؤثيثىف.jpg",
-  "/assets/oldcar.avif",
-  "/assets/bus.jpg",
+  {
+    name: "مزاد سيارات",
+    image: "/assets/car.webp"
+  },
+  {
+    name: "مزاد عقارات",
+    image: "/عقارات.png",
+  },
+  {
+    name: "مزاد موتورات",
+    image: "/assets/motor.jpg",
+  },
 ];
 
 const Company = () => {
@@ -13,11 +20,12 @@ const Company = () => {
     <div className="container mx-auto my-8 flex justify-center items-center gap-4 flex-wrap ">
       {image.map((item, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="flex justify-center items-center flex-col gap-y-4 w-full">
+            <h6 className="text-3xl font-semibold text-main-blue text-center">{item.name}</h6>
             <img
-              src={item}
+              src={item.image}
               alt="car"
-              className="w-[300px] h-[300px] object-cover rounded-md shadow-md cursor-pointer"
+              className="w-[80%] h-[500px] object-cover rounded-md shadow-md cursor-pointer"
             />
           </div>
         );
