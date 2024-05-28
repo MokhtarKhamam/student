@@ -1,10 +1,13 @@
 import React from "react";
 import CardWrapper from "../components/auth/CardWrapper.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate()
 
   const handleLogin = () => {
     console.log('Login button clicked');
+    navigate("/company")
   };
 
   return (

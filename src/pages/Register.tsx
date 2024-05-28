@@ -1,10 +1,13 @@
 import React from "react";
 import CardWrapper from "../components/auth/CardWrapper.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate()
 
   const handleRegister = () => {
     console.log('Register button clicked');
+    navigate("company")
   };
   return (
     <CardWrapper

@@ -1,6 +1,9 @@
+import { Button } from "@mui/material";
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
     <nav className="bg-[#30475e]">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -9,10 +12,14 @@ const Navbar = () => {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center mr-8">
               <img
-                className="h-8 w-auto"
+                className="h-8 w-auto cursor-pointer"
+                onClick={() => navigate("/")}
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 alt="Your Company"
               />
+            </div>
+            <div>
+              <Button variant="contained" onClick={() => navigate("/login")} sx={{marginRight: "20px"}}>Login</Button>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
