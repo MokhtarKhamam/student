@@ -7,7 +7,7 @@ const Register = () => {
 
   const handleRegister = () => {
     console.log('Register button clicked');
-    navigate("company")
+    navigate("/company")
   };
   return (
     <CardWrapper
